@@ -1,3 +1,5 @@
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -11,20 +13,27 @@ public class App {
         
         key = prop.getProperty("key");
         String urlMovie = "https://api.themoviedb.org/3/movie/top_rated?api_key="+key;
-        //https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060
-        
-        
+                
         String body = movieTV.myMethod(urlMovie);
         
         // extrair só os dados que interessam (titulo, poster, classificação)
         var parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
-
         // exibir e manipular os dados 
         for (Map<String,String> filme : listaDeFilmes) {
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("backdrop_path"));
-            System.out.println(filme.get("vote_average"));
+            String titulo = filme.get("title");
+            String nomeArquivo = titulo +".png";
+
+            String urlImagem = "https://image.tmdb.org/t/p/w500"+filme.get("backdrop_path");
+            InputStream inputStream = new URL(urlImagem).openStream();
+
+            var geradora = new GeradoraDeFigurinhas();
+            geradora.cria(inputStream, nomeArquivo);
+
+            
+            System.out.println(titulo);
+            // System.out.println("https://image.tmdb.org/t/p/w500"+filme.get("backdrop_path"));
+            // System.out.println(filme.get("vote_average"));
             System.out.println();
         }
     }
