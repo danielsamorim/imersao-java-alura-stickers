@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
-
 import javax.imageio.ImageIO;
 import javax.swing.plaf.FontUIResource;
 
@@ -15,6 +14,10 @@ public class GeradoraDeFigurinhas {
     // InputStream inputStream = 
     //                  new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_1.jpg").openStream();
 
+
+
+      
+  
     //leitura da imagem
     BufferedImage imagemOriginal = ImageIO.read(inputStream);
 
