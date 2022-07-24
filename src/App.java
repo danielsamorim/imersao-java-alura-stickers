@@ -8,12 +8,14 @@ public class App {
 
         // fazer uma conexão HTTP e buscar os top 250 filmes
 
-        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/TopMovies.json";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDeFilme();
+        // String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/TopMovies.json";
+        // ExtratorDeConteudo extrator = new ExtratorDeConteudoDeFilme();
 
         // String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD-JamesWebbSpaceTelescope.json";
         // ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
+        String url = "http://localhost:8080/linguagens";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDeFilme();
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
 
