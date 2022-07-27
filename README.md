@@ -8,7 +8,7 @@ Projeto feito durante a Imersão Java da Alura. O objetivo era consumir uma API 
 
 | 🪧 Vitrine.Dev |     |
 | -------------  | --- |
-| ✨ Nome        | Alura Sticker
+| ✨ Nome        | Alura Stickers
 | 🏷️ Tecnologias | Java e Git
 | 🤿 Desafio | https://www.alura.com.br/imersao-java
 
