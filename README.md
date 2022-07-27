@@ -14,7 +14,7 @@ Projeto feito durante a Imersão Java da Alura. O objetivo era consumir uma API 
 
 
 ## 🔨 Tecnologias
-- ``Java - 17.0.2 2022-01-18 LTS``
+- ``Java - 17.0.3 2022-04-19``
 - ``Git``
 
 
